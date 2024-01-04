@@ -93,7 +93,7 @@ public class ProjectileGunTutorial : MonoBehaviour
         {
             targetPoint = hit.point;
             GameObject zomb = hit.collider.gameObject;
-            if(zomb.tag == "Zombie")
+            if (zomb.tag == "Zombie")
             {
                 zomb.GetComponent<ZombieAI>().Damaged(20);
             }
@@ -126,7 +126,7 @@ public class ProjectileGunTutorial : MonoBehaviour
         {
             var muzzle = Instantiate(muzzleFlash, attackPoint.position, attackPoint.rotation);
             muzzle.transform.parent = attackPoint.transform;
-            GameObject.Destroy(muzzle, 0.5f);
+            Destroy(muzzle, 0.5f);
         }
 
         // --- Handle Audio ---
@@ -171,7 +171,7 @@ public class ProjectileGunTutorial : MonoBehaviour
 
         if (query.Count >= 10)
         {
-            GameObject.Destroy(query.Dequeue());
+            Destroy(query.Dequeue());
         }
 
         //if more than one bulletsPerTap make sure to repeat shoot function

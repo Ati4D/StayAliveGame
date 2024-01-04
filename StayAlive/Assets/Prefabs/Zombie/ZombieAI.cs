@@ -11,8 +11,11 @@ public class ZombieAI : MonoBehaviour
     [SerializeField]
     private float _speed = 1f;
     [SerializeField]
-    private Transform _player;
+    private GameObject _player;
     private Animator _anim;
+
+    [SerializeField]
+    private Rigidbody thisRB;
 
     [SerializeField]
     private float _moveDistance = 10;
@@ -35,7 +38,16 @@ public class ZombieAI : MonoBehaviour
             if (!isAlive())
             {
                 _anim.SetTrigger("isDead");
+                thisRB.constraints = RigidbodyConstraints.FreezeAll;
             }
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "Bullet")
+        {
+            Destroy(other.gameObject);
         }
     }
 
@@ -43,26 +55,23 @@ public class ZombieAI : MonoBehaviour
     {
         if (isAlive())
         {
-            float distance = (_player.position - transform.position).magnitude;
+            float distance = (_player.transform.position - transform.position).magnitude;
 
             if (distance <= _moveDistance && distance > _attackDistance)
             {
                 _anim.SetBool("isMove", true);
-                transform.LookAt(_player);
+                transform.LookAt(_player.transform);
                 transform.Translate(Vector3.forward * _speed * Time.deltaTime);
             }
             else if (distance <= _attackDistance)
             {
                 _anim.SetTrigger("isAttack");
+                _player.GetComponent<Player>().AddDamage(20);
             }
             else
             {
                 _anim.SetBool("isMove", false);
             }
-        }
-        else
-        {
-
         }
     }
 
