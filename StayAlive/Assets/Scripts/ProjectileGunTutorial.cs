@@ -9,7 +9,7 @@ public class ProjectileGunTutorial : MonoBehaviour
     //bullet 
     public GameObject bullet;
 
-    
+
     //bullet force
     public float shootForce, upwardForce;
     private Queue<GameObject> query;
@@ -34,7 +34,7 @@ public class ProjectileGunTutorial : MonoBehaviour
     public AudioClip GunShotClip;
     public AudioSource source;
     public Vector2 audioPitch = new Vector2(.9f, 1.1f);
-    
+
     //Graphics
     public GameObject muzzleFlash;
     public TextMeshProUGUI ammunitionDisplay;
@@ -45,7 +45,7 @@ public class ProjectileGunTutorial : MonoBehaviour
     private void Awake()
     {
         query = new Queue<GameObject>();
-        if(source != null) source.clip = GunShotClip;
+        if (source != null) source.clip = GunShotClip;
         bulletsLeft = magazineSize;
         readyToShoot = true;
     }
@@ -90,7 +90,14 @@ public class ProjectileGunTutorial : MonoBehaviour
         //check if ray hits something
         Vector3 targetPoint;
         if (Physics.Raycast(ray, out hit))
+        {
             targetPoint = hit.point;
+            GameObject zomb = hit.collider.gameObject;
+            if(zomb.tag == "Zombie")
+            {
+                zomb.GetComponent<ZombieAI>().Damaged(20);
+            }
+        }
         else
             targetPoint = ray.GetPoint(75); //Just a point far away from the player
         Debug.Log("We are shooting");
@@ -121,11 +128,12 @@ public class ProjectileGunTutorial : MonoBehaviour
             muzzle.transform.parent = attackPoint.transform;
             GameObject.Destroy(muzzle, 0.5f);
         }
-        
+
         // --- Handle Audio ---
         if (source != null)
         {
-            if(source.transform.IsChildOf(transform)){
+            if (source.transform.IsChildOf(transform))
+            {
                 source.Play();
             }
             else
@@ -150,7 +158,7 @@ public class ProjectileGunTutorial : MonoBehaviour
         bulletsLeft--;
         bulletsShot++;
         Debug.Log("Bullet--");
-        
+
         //Invoke resetShot function (if not already invoked), with your timeBetweenShooting
         if (allowInvoke)
         {
@@ -165,7 +173,7 @@ public class ProjectileGunTutorial : MonoBehaviour
         {
             GameObject.Destroy(query.Dequeue());
         }
-        
+
         //if more than one bulletsPerTap make sure to repeat shoot function
         if (bulletsShot < bulletsPerTap && bulletsLeft > 0)
             Invoke("Shoot", timeBetweenShots);

@@ -25,41 +25,44 @@ public class ZombieAI : MonoBehaviour
         _anim = GetComponent<Animator>();
     }
 
-    private void OnTriggerEnter(Collider other)
+    public void Damaged(int hp)
     {
-        if(isAlive() && other.tag == "Bullet")
+        if (isAlive())
         {
             _anim.SetTrigger("isDamaged");
-            AddDamage(20);
-            if(!isAlive())
+            AddDamage(hp);
+            Debug.Log("Damaged");
+            if (!isAlive())
             {
                 _anim.SetTrigger("isDead");
             }
-
-            Destroy(other.gameObject);
         }
     }
 
     private void Update()
     {
-        if(isAlive())
+        if (isAlive())
         {
-float distance = (_player.position - transform.position).magnitude;
+            float distance = (_player.position - transform.position).magnitude;
 
-        if (distance <= _moveDistance && distance > _attackDistance)
-        {
-            _anim.SetBool("isMove", true);
-            transform.LookAt(_player);
-            transform.Translate(Vector3.forward * _speed * Time.deltaTime);
-        }
-        else if (distance <= _attackDistance)
-        {
-            _anim.SetTrigger("isAttack");
+            if (distance <= _moveDistance && distance > _attackDistance)
+            {
+                _anim.SetBool("isMove", true);
+                transform.LookAt(_player);
+                transform.Translate(Vector3.forward * _speed * Time.deltaTime);
+            }
+            else if (distance <= _attackDistance)
+            {
+                _anim.SetTrigger("isAttack");
+            }
+            else
+            {
+                _anim.SetBool("isMove", false);
+            }
         }
         else
         {
-            _anim.SetBool("isMove", false);
-        }
+
         }
     }
 
