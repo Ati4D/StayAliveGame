@@ -6,12 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="8242d2f4-6ead-411a-b9d2-389807e66b3d" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.StayAlive/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.StayAlive/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/BigRookGames/_AssetPacks/Stylized Weapon Pack/M4 Scoped Assault Rifle/Audio/SFX_Assault Single Shot.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/BigRookGames/_AssetPacks/Stylized Weapon Pack/M4 Scoped Assault Rifle/Audio/SFX_Assault Single Shot.wav.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/BigRookGames/_AssetPacks/Stylized Weapon Pack/M4 Scoped Assault Rifle/Audio/clip audio mixer.mixer" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/BigRookGames/_AssetPacks/Stylized Weapon Pack/M4 Scoped Assault Rifle/Audio/clip audio mixer.mixer" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/BigRookGames/_AssetPacks/Stylized Weapon Pack/M4 Scoped Assault Rifle/Prefabs/VFX_M4 Muzzle Flash.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/BigRookGames/_AssetPacks/Stylized Weapon Pack/M4 Scoped Assault Rifle/Prefabs/VFX_M4 Muzzle Flash.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Guns/Revolver.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Guns/Revolver.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GunSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GunSystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UnityTechnologies/ParticlePack/EffectExamples/Smoke &amp; Steam Effects/Materials/SmokeySteam03.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UnityTechnologies/ParticlePack/EffectExamples/Smoke &amp; Steam Effects/Materials/SmokeySteam03.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GunSystem.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GunSystem.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PickUpController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PickUpController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2022.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2022.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,6 +99,9 @@
       <workItem from="1704228191251" duration="5930000" />
       <workItem from="1704278781798" duration="3482000" />
       <workItem from="1704292279935" duration="9714000" />
+      <workItem from="1704315207101" duration="1594000" />
+      <workItem from="1704379197814" duration="943000" />
+      <workItem from="1704380883809" duration="1489000" />
     </task>
     <servers />
   </component>
