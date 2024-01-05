@@ -94,6 +94,12 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 4981390077914219614}
   m_SourcePrefab: {fileID: 100100000, guid: f99bbd0754201f448b27f0c455b92b76, type: 3}
+--- !u!95 &2059216001080143882 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 4972802055694576266, guid: f99bbd0754201f448b27f0c455b92b76,
+    type: 3}
+  m_PrefabInstance: {fileID: 6454009102844516992}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &4699561680326308042 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1776966266084158026, guid: f99bbd0754201f448b27f0c455b92b76,
@@ -146,7 +152,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 80
   m_CollisionDetection: 0
 --- !u!114 &312130010296418623
 MonoBehaviour:
@@ -163,9 +169,13 @@ MonoBehaviour:
   _health: 100
   _speed: 1
   _player: {fileID: 0}
+  _anim: {fileID: 2059216001080143882}
   thisRB: {fileID: 4105853109458150717}
+  thisBC: {fileID: 2646731456225971869}
+  thisTriggerBC: {fileID: 4981390077914219614}
   _moveDistance: 10
   _attackDistance: 1.7
+  _damageToPlayer: 20
 --- !u!65 &4981390077914219614
 BoxCollider:
   m_ObjectHideFlags: 0
