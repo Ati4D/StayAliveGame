@@ -744,7 +744,7 @@ PrefabInstance:
         type: 3}
       propertyPath: playerRb
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 37266045}
     - target: {fileID: 2320124840520760968, guid: acab4239efdb47c47849d334f221cb0f,
         type: 3}
       propertyPath: ammunitionDisplay
@@ -1162,7 +1162,7 @@ PrefabInstance:
         type: 3}
       propertyPath: playerRb
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 854248283}
     - target: {fileID: 6458179676482844792, guid: 17ca072bde2ffc2479858327975ac749,
         type: 3}
       propertyPath: ammunitionDisplay
@@ -2595,79 +2595,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2d3a85ecde41a8246a79669975912b74, type: 3}
---- !u!1001 &1719215297
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 312130010296418623, guid: c9392660d3752d633be04f0265dd2f3d,
-        type: 3}
-      propertyPath: _player
-      value: 
-      objectReference: {fileID: 547446451}
-    - target: {fileID: 4699561680326308042, guid: c9392660d3752d633be04f0265dd2f3d,
-        type: 3}
-      propertyPath: m_Name
-      value: Zombie Variant (2)
-      objectReference: {fileID: 0}
-    - target: {fileID: 5364881026140301936, guid: c9392660d3752d633be04f0265dd2f3d,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 92.68555
-      objectReference: {fileID: 0}
-    - target: {fileID: 5364881026140301936, guid: c9392660d3752d633be04f0265dd2f3d,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 21.153095
-      objectReference: {fileID: 0}
-    - target: {fileID: 5364881026140301936, guid: c9392660d3752d633be04f0265dd2f3d,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 44.105873
-      objectReference: {fileID: 0}
-    - target: {fileID: 5364881026140301936, guid: c9392660d3752d633be04f0265dd2f3d,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.9149597
-      objectReference: {fileID: 0}
-    - target: {fileID: 5364881026140301936, guid: c9392660d3752d633be04f0265dd2f3d,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5364881026140301936, guid: c9392660d3752d633be04f0265dd2f3d,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0.40354523
-      objectReference: {fileID: 0}
-    - target: {fileID: 5364881026140301936, guid: c9392660d3752d633be04f0265dd2f3d,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5364881026140301936, guid: c9392660d3752d633be04f0265dd2f3d,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5364881026140301936, guid: c9392660d3752d633be04f0265dd2f3d,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 47.6
-      objectReference: {fileID: 0}
-    - target: {fileID: 5364881026140301936, guid: c9392660d3752d633be04f0265dd2f3d,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: c9392660d3752d633be04f0265dd2f3d, type: 3}
 --- !u!1 &1819809373
 GameObject:
   m_ObjectHideFlags: 0
@@ -2739,6 +2666,5 @@ SceneRoots:
   - {fileID: 89150197}
   - {fileID: 1026931702}
   - {fileID: 1166864618}
-  - {fileID: 1719215297}
   - {fileID: 1292383780}
   - {fileID: 1536457391}
